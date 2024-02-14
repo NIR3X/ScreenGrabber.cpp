@@ -32,6 +32,8 @@ Here's a simple example demonstrating how to capture screens using the **ScreenG
 
 ```cpp
 #include "ScreenGrabber.h"
+#include <fstream>
+#include <iostream>
 
 int main() {
 	// Create an instance of CScreenGrabber
