@@ -3,6 +3,7 @@
 The **ScreenGrabber** library provides functionality to capture screens or specific regions of the screen on Windows systems and save them as images. It supports various image formats, including BMP, GIF, JPEG, PNG, and TIFF, through the GDI+ library.
 
 ## Features
+
 * Capture the entire screen or specific regions.
 * Supports capturing multiple monitors.
 * Save captured screens in BMP, GIF, JPEG, PNG, or TIFF formats with customizable options.
@@ -24,7 +25,12 @@ make
 
 3. Link against the `ScreenGrabber.a` static library.
 
-4. Ensure that your project is configured to use the Windows API and GDI+.
+4. Ensure that your project is linked against the following libraries:
+
+* `gdi32`
+* `gdiplus`
+* `ole32`
+* `shcore`
 
 ## Usage
 
@@ -83,11 +89,6 @@ int main() {
 	return 0;
 }
 ```
-
-## Dependencies
-
-* Windows API
-* GDI+ library
 
 ## License
 [![GNU AGPLv3 Image](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.html)  
